@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { Sidebar } from "./Components/Sidebar/Index"
+import { MoviesContextProvider } from "./Contexts/MovieContexts"
+import { Home } from "./Pages/Home"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      wassupppp
+      <MoviesContextProvider>
+        <Sidebar />
+        <Home />
+      </MoviesContextProvider>
     </div>
   )
 }
