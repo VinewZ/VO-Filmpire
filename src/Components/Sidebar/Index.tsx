@@ -20,6 +20,10 @@ export function Sidebar() {
 
     return (
         <NavSidebar>
+            <h1>FILMPIRE</h1>
+            <hr/>
+
+            <p className="subtitle">Genre</p>
             <ul>
                 {renderSidebar()}
             </ul>

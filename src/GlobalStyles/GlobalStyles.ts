@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     background: ${v.themeBg};
-    color: #${v.white};
   }
 
   body,

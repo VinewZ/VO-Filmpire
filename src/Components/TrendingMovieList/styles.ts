@@ -4,7 +4,7 @@ import * as v from '../../GlobalStyles/Variables'
 export const TitlePage = styled.h2`
     margin-left: 1em;
     font-size: 2rem;
-    color: ${v.white}
+    color: ${v.black}
 `
 
 export const MovieListContainer = styled.div`
@@ -24,7 +24,6 @@ export const MovieListItem = styled.div`
     align-items: center;
 
     p{
-        color: ${v.white};
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -41,7 +40,6 @@ export const MovieListItem = styled.div`
     span{
         display: grid;
         place-items: center;
-        color: ${v.white};
         background-color: ${v.themeBg};
         position: absolute;
         width: 34px;
