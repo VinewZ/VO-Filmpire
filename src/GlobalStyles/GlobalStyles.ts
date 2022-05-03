@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${v.themeBg};
     color: #${v.white};
   }
-  
+
   body,
   input,
   button,

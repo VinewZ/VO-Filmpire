@@ -3,10 +3,12 @@ import { BsFilm } from 'react-icons/bs';
 export const SidebarData = [
     {
         icon: <BsFilm />,
-        content: 'Movies',
+        content: 'Home',
+        redirect: '/',
     },
     {
         icon: <BsFilm />,
-        content: 'Horror',
+        content: 'Comedy',
+        redirect: '/comedy',
     },
 ]

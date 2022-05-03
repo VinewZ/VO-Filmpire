@@ -1,14 +1,14 @@
 import React from 'react';
+import { ComedyMovieList } from '../../Components/ComedyMovieList';
 import { Header } from '../../Components/Header';
-import { TrendingMovieList } from '../../Components/TrendingMovieList';
 import { HomeContainer } from './styles';
 
-export function Home() {
+export function Comedy() {
 
     return (
         <HomeContainer>
             <Header />
-            <TrendingMovieList />
+            <ComedyMovieList />
         </HomeContainer>
 
     )

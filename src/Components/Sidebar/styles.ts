@@ -11,7 +11,7 @@ export const NavSidebar = styled.nav`
     width: 230px;
     height: 100vh;
     padding: 0 4em;
-    border-right: 3px solid ${v.themeRed};
+    border-right: 6px solid ${v.themeRed};
 `
 
 export const MenuItem = styled.li`

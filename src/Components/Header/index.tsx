@@ -1,8 +1,23 @@
 import React from 'react'
-import { HeaderImg } from './styles'
+import { AiOutlineUser } from 'react-icons/ai'
+import { BsFillSunFill, BsSearch } from 'react-icons/bs'
+import { HeaderImg, TopBar } from './styles'
 
 export function Header() {
     return (
-        <HeaderImg src='https://3.bp.blogspot.com/-6lw5jLaG6s0/WG137e1E6LI/AAAAAAABD0Y/CJQmQWgUcLodhbC0Y02JfathClCYZbi9gCLcB/s1600/14364850_1762630517311206_4949266272208293125_n.jpg' />
+        <>
+            <TopBar className="top-bar">
+                <BsFillSunFill className='light-icon' />
+                <div className="search-bar">
+                    <BsSearch className='search-icon' />
+                    <input type="text" name="" id="" />
+                </div>
+                <div className="user-area">
+                    <p>Login</p>
+                    <AiOutlineUser className='user-icon' />
+                </div>
+            </TopBar>
+            <HeaderImg src={'https://i.pinimg.com/originals/35/37/55/3537558babb37709e985445387078be4.jpg'} />
+        </>
     )
 }
