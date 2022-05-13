@@ -7,11 +7,11 @@ import { HeaderContainer, HeaderImg, HeaderInfoContainer, TopBar } from './style
 
 export function Header() {
     const { movieList, fetchApi } = useMovies()
-    const [ search, setSearch ] = useState('')
+    const [search, setSearch] = useState('')
 
     function handleSearch(e: FormEvent) {
         e.preventDefault()
-        fetchApi(`search/movie?api_key=57732b15bda1a9fb2b8390c0b77e7df3&query=${search}`)
+        fetchApi(`search/movie?api_key=${import.meta.env.VITE_API_KEY}&query=${search}`)
     }
     return (
         <>
@@ -27,7 +27,7 @@ export function Header() {
                 </div>
             </TopBar>
             <HeaderContainer>
-                <HeaderImg src={ movieList.length > 0 ? `https://image.tmdb.org/t/p/original${movieList[0].poster_path}` : undefined} />
+                <HeaderImg src={movieList.length > 0 ? `https://image.tmdb.org/t/p/original${movieList[0].poster_path}` : undefined} />
                 <HeaderInfoContainer>
                     <h3>{movieList.length > 0 ? movieList[0].title : undefined}</h3>
                     <p>{movieList.length > 0 ? movieList[0].release_date : undefined}</p>

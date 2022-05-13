@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useMovies } from '../../Contexts/MovieContexts';
+import { Pagination } from '../Pagination';
 import { MovieListContainer, MovieListItem, TitlePage } from './styles';
 
 export function ActionMovieList() {
-
-    const ACTION_API_URL = 'discover/movie?api_key=57732b15bda1a9fb2b8390c0b77e7df3&with_genres=28'
+    const [pageNumber, setPageNumber] = useState(1)
+    const ACTION_API_URL = `discover/movie?api_key=${import.meta.env.VITE_API_KEY}&with_genres=28&page=${pageNumber}`
     const { fetchApi, movieList } = useMovies()
 
     useEffect(() => {
         fetchApi(ACTION_API_URL)
-    }, [])
+    }, [pageNumber])
 
     function renderMovies() {
         return (
@@ -30,6 +31,7 @@ export function ActionMovieList() {
             <MovieListContainer>
                 {renderMovies()}
             </MovieListContainer>
+            <Pagination setPageNumber={setPageNumber} />
         </>
     )
 }

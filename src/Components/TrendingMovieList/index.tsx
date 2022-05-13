@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMovies } from '../../Contexts/MovieContexts';
+import { Pagination } from '../Pagination';
 import { MovieListContainer, MovieListItem, TitlePage } from './styles';
 
 export function TrendingMovieList() {
-    const TRENDING_API_URL = 'trending/all/day?api_key=57732b15bda1a9fb2b8390c0b77e7df3'
+    const [pageNumber, setPageNumber] = useState(1)
+    const TRENDING_API_URL = `trending/all/day?api_key=${import.meta.env.VITE_API_KEY}&page=${pageNumber}`
     const { fetchApi, movieList } = useMovies()
 
     useEffect(() => {
         fetchApi(TRENDING_API_URL)
-    }, [])
+    }, [pageNumber])
 
     function renderMovies() {
         return (
@@ -29,6 +31,7 @@ export function TrendingMovieList() {
             <MovieListContainer>
                 {renderMovies()}
             </MovieListContainer>
+            <Pagination setPageNumber={setPageNumber} />
         </>
     )
 }
