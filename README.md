@@ -27,8 +27,8 @@
 
 # :camera: Screenshots
 <div align="center">
-   <img src="./github/screen1.jpg" width="400px">
-   <img src="./github/screen2.jpg" width="400px">
+   <img src="./git/screen1.jpg" width="400px">
+   <img src="./git/screen2.jpg" width="400px">
 </div>
 
 # :rocket: Technologies
